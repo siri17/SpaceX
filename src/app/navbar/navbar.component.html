@@ -1,0 +1,72 @@
+<div id="main">
+  <nav>
+    <p>Launch Year</p>
+
+    <div style="overflow-x:auto;">
+      <table>
+
+        <tr>
+          <td><button class="btn-gradient btn_inactive" (click)="onClickyear(2006)">2006</button></td>
+          <td><button class="btn-gradient btn_inactive" (click)="onClickyear(2007)">2007</button></td>
+        </tr>
+        <tr>
+          <td><button class="btn-gradient btn_inactive" (click)="onClickyear(2008)">2008</button></td>
+          <td><button class="btn-gradient btn_inactive" (click)="onClickyear(2009)">2009</button></td>
+        </tr>
+        <tr>
+          <td><button class="btn-gradient btn_inactive" (click)="onClickyear(2010)">2010</button></td>
+          <td><button class="btn-gradient btn_inactive" (click)="onClickyear(2011)">2011</button></td>
+        </tr>
+        <tr>
+          <td><button class="btn-gradient btn_inactive" (click)="onClickyear(2012)">2012</button></td>
+          <td><button class="btn-gradient btn_inactive" (click)="onClickyear(2013)">2013</button></td>
+        </tr>
+        <tr>
+          <td><button class="btn-gradient btn_inactive" (click)="onClickyear(2014)">2014</button></td>
+          <td><button class="btn-gradient btn_inactive" (click)="onClickyear(2015)">2015</button></td>
+        </tr>
+        <tr>
+          <td><button class="btn-gradient btn_inactive" (click)="onClickyear(2016)">2016</button></td>
+          <td><button class="btn-gradient btn_inactive" (click)="onClickyear(2017)">2017</button></td>
+        </tr>
+        <tr>
+          <td><button class="btn-gradient btn_inactive" (click)="onClickyear(2018)">2018</button></td>
+          <td><button class="btn-gradient btn_inactive" (click)="onClickyear(2019)">2019</button></td>
+        </tr>
+
+      </table>
+    </div>
+
+    <p>Launch Success</p>
+    <table>
+
+      <tr>
+        <td><button class="btn-gradient" [ngClass]="[state ? 'btn btnactive':'btn btn_inactive']"
+            (click)="onClickMe(true)">True</button></td>
+
+        <td><button class="btn-gradient" 
+            [ngClass]="[falseState ? 'btn btnactive':'btn btn_inactive']" (click)="falseLaunch(false)">False</button>
+        </td>
+      </tr>
+
+    </table>
+
+    <p>Land Success</p>
+    <table>
+
+      <tr>
+        <td><button class="btn-gradient" [ngClass]="[truelanding ? 'btn btnactive':'btn btn_inactive']"
+            (click)="trueLand(true)">True</button></td>
+
+        <td><button class="btn-gradient" [ngClass]="[falselanding ? 'btn btnactive':'btn btn_inactive']"
+            (click)="falseLand(false)">False</button></td>
+      </tr>
+
+    </table>
+
+
+  </nav>
+
+  <app-user #user [launchSuccess]="launchSuccess" [landSuccess]="landSuccess" [year]="year"></app-user>
+
+</div>

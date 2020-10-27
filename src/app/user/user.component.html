@@ -1,0 +1,32 @@
+<article>
+
+  <div class="centered">
+
+    <section class="cards">
+
+      <article class="card" *ngFor="let user of user">
+        <a href="#">
+          <picture class="thumbnail">
+            <img src="{{user.links.mission_patch}}">
+          </picture>
+          <div class="card-content">
+
+            <h2>{{user.mission_name}} #{{user.flight_number}}</h2>
+
+            <label>Mission id : </label> {{user.mission_id}}<br>
+            <label>Launch Year : </label> {{user.launch_year}}<br>
+            <label>Successful Launch : </label> {{user.launch_success}}<br>
+            <label>Successful Land : </label> {{user.rocket.first_stage.cores[0].land_success}}<br>
+          </div>
+        </a>
+      </article>
+
+    </section>
+
+  </div>
+
+  <div class="user-name">
+    <h4>This module is created by <br></h4>
+    <h4>  Siri Chandana </h4>
+  </div>
+</article>
